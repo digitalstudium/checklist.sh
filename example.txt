@@ -1,0 +1,19 @@
+@Work Tasks
+Review pull requests
+Update documentation
+  - Add examples
+  - Fix typos
+  - Update API reference
+Schedule team meeting
+
+@Personal
+Buy groceries
+  - Milk
+  - Bread
+  - Eggs
+Call dentist
+Exercise for 30 minutes
+
+@Weekend Projects
+Clean garage
+Organize photo albums
