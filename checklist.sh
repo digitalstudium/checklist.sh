@@ -235,7 +235,7 @@ display_task() {
 # Full display refresh
 full_display() {
     clear_screen
-    echo "Checklist - Use ↑/↓ to navigate, SPACE to toggle, q to quit"
+    echo "Checklist - Use ↑/↓/PgUp/PgDn to navigate, SPACE to toggle, q to quit"
     echo "File: $FILE"
     
     # Show scroll indicator
@@ -318,7 +318,7 @@ while true; do
                     full_display
                 fi
                 ;;
-            '[5~') # Page Up
+            '[5~'|'[5') # Page Up
                 if [ $current_selection -gt 0 ]; then
                     current_selection=$((current_selection - max_visible_items))
                     if [ $current_selection -lt 0 ]; then
@@ -328,7 +328,7 @@ while true; do
                     full_display
                 fi
                 ;;
-            '[6~') # Page Down
+            '[6~'|'[6') # Page Down
                 if [ $current_selection -lt $((total_items - 1)) ]; then
                     current_selection=$((current_selection + max_visible_items))
                     if [ $current_selection -ge $total_items ]; then
